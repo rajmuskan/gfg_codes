@@ -1,0 +1,18 @@
+bool comparator(int a,int b){
+    return a>b;
+}
+
+class Solution
+{
+    public:
+        string MaxNumber(int a[], int n)
+        {
+           //code here.
+           sort(a,a+n,comparator);
+            string s="";
+           for(int i=0;i<n;i++){
+                s.push_back(a[i]+'0');     
+           }
+           return s;
+        }  
+};
